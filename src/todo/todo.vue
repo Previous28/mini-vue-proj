@@ -25,13 +25,14 @@
 <script>
 import Item from './item.vue'
 import Tabs from './tabs.vue'
-var id = 0;
+import Store from './store.js'
+var id = Store.getBaseId();
 
 export default {
   data: function() {
     return {
       newItem: "",
-      todos: [],
+      todos: Store.fetch(),
       filter: "所有"
     }
   },
@@ -67,6 +68,14 @@ export default {
       } else {
         return this.todos;
       }
+    }
+  },
+  watch: {
+    todos: {
+      handler: function(val, oldVal) {
+        Store.save(val);
+      },
+      deep: true
     }
   }
 }
