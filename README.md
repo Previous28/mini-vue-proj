@@ -1,6 +1,6 @@
 # HTodo-list
 
-###项目说明
+### 项目说明
 
 一个用来入门Vue的小项目
 
@@ -43,7 +43,7 @@ App：挂载整个应用
 
 
 
-## Build Setup
+## 启动项目
 
 ``` bash
 # install dependencies 安装依赖
