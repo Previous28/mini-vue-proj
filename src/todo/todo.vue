@@ -55,6 +55,7 @@ export default {
       this.todos = this.todos.filter(todo=>!todo.finish);
     }
   },
+  // 声明所用到的组件
   components: {
     Item,
     Tabs
@@ -75,6 +76,7 @@ export default {
       handler: function(val, oldVal) {
         Store.save(val);
       },
+      // deep为true时才能够实时监听finish这个布尔值的变化
       deep: true
     }
   }

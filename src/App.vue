@@ -3,13 +3,13 @@
     <div id="cover"></div>
     <my-header></my-header>
     <todo></todo>
-    <Footer></Footer>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
 import myHeader from './todo/header.vue'
-import Footer from './todo/footer.vue'
+import myFooter from './todo/footer.vue'
 import todo from './todo/todo.vue'
 
 export default {
@@ -18,9 +18,10 @@ export default {
       todos: [ ]
     }
   },
+  // 声明所用到的组件
   components: {
     myHeader,
-    Footer,
+    myFooter,
     todo
   }
 }

@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  // 声明子组件需要从父组件得到的数据
   props: {
     todos: {
       type: Array,
@@ -37,10 +38,12 @@ export default {
       this.$emit('toggle', state);
     },
     clearAllFinished: function() {
+      // 调用父组件的clearAllFinishedTodos方法
       this.$emit('clearAllFinishedTodos');
     }
   },
   computed: {
+    // 实时计算剩余代办事项的数量
     numberOfTodos: function() {
       return this.todos.filter(todo=>todo.finish === false).length;
     }

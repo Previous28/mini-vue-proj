@@ -1,11 +1,14 @@
 <template>
   <div :class="['todo-item', todo.finish?'finished':'']">
+    <!-- 待办事项前面的勾 -->
     <input
       type="checkbox"
       v-model="todo.finish"
       class="toggle"
     />
+    <!-- 待办事项内容 -->
     <label>{{todo.thing}}</label>
+    <!-- 删除待办事项的按钮 -->
     <button 
       class="destory"
       @click="deleteItem">
@@ -15,6 +18,7 @@
 
 <script>
 export default {
+  // 声明子组件需要从父组件得到的数据
   props:{
     todo: {
       type: Object,
@@ -23,6 +27,7 @@ export default {
   },
   methods: {
     deleteItem: function() {
+      // 调用父组件的delete方法
       this.$emit('delete', this.todo.id);
     }
   }
