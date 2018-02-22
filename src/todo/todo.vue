@@ -25,7 +25,7 @@
 <script>
 import Item from './item.vue'
 import Tabs from './tabs.vue'
-import Store from './store.js'
+import Store from '../store/store.js'
 var id = Store.getBaseId();
 
 export default {

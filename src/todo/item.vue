@@ -98,7 +98,6 @@ export default {
   margin: auto 0;
   font-size: 30px;
   margin-bottom: 11px;
-  transition: color 0.2s ease-out;
   background-color: transparent;
   border-width: 0;
   cursor: pointer;

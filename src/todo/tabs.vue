@@ -83,7 +83,6 @@ export default {
 }
 .tabs span {
   padding: 0 10px;
-  display: inline-block;
 }
 .actived{
   border: 1px solid rgb(245, 154, 154);

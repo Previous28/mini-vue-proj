@@ -36,6 +36,7 @@ App：挂载整个应用
 |——node_modules：相关依赖文件
 |——src：前端开发源码
 	|——assets：静态资源如图片、样式文件等
+	|——store：实现本地存储功能
 	|——todo：前端vue组件
 	|——App.vue：应用的外层结构
 	|——main.js：应用的入口文件
